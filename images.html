@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script>
+// Check if user is logged in
+if (!sessionStorage.getItem('isLoggedIn')) {
+    // Not logged in - redirect to login page
+    window.location.href = 'login.html';
+}
+</script>
+   <header>
+            <div id="nav1" class="heading">
+                <h1>
+                    WELCOME TO THE FUTURE OF TECHNOLOGY
+                </h1>
+                <div id="nav2" class="nav2">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="aboutus.html">ABOUT_US</a></li>
+                        <li><a href="images.html">IMAGES</a></li>
+                        <li><a href="videos.html">VIDEOS</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </header>
+
+
+<div class="image-gallery"> 
+    <h1>My Life in Pictures</h1>
+    
+    <a href="https://photos.app.goo.gl/s3jEcKBX6dcRT6Us7" target="_blank" class="gallery-link-btn">
+        <span>📸 View All Memories on Google Photos</span>
+        <span class="link-arrow">→</span>
+    </a>
+    
+    <!-- Add date captions to your images -->
+    <div class="memory-item">
+        <img src="img1.jpg" alt="Memory 1" tabindex="0">
+        <p class="memory-date">📅 January 15, 2024</p>
+        <p class="memory-caption">Amazing day with friends</p>
+    </div>
+    
+    <!-- Repeat for more images -->
+</div>
+<footer>
+<div id="footer1" class="footer1">
+<h3>
+&copy; PROJECT_1 BRAVEHART. WELCOME TO THE FUTURE OF TECHNOLOGY.
+</h3>
+</div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Notes & Goals</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script>
+// Check if user is logged in
+if (!sessionStorage.getItem('isLoggedIn')) {
+    // Not logged in - redirect to login page
+    window.location.href = 'login.html';
+}
+</script>
+
+<header>
+<div id="nav1" class="heading">
+<h1>MY PERSONAL LIFE JOURNAL</h1>
+<div id="nav2" class="nav2">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT ME</a></li>
+<li><a href="images.html">MEMORIES</a></li>
+<li><a href="videos.html">VIDEO DIARY</a></li>
+<li><a href="contactus.html">NOTES & GOALS</a></li>
+</ul>
+</div>
+</div>
+</header>
+
+<div class="notes-container">
+<h1>Personal Notes & Life Goals</h1>
+<p class="notes-subtitle">Track my progress, document thoughts, and plan my future</p>
+
+<div class="notes-grid">
+<!-- Daily Reflections -->
+<div class="note-section">
+<h2>📝 Daily Reflections</h2>
+<div class="note-card">
+<h3>November 11, 2024</h3>
+<p><strong>What went well today:</strong></p>
+<p>[Write your thoughts]</p>
+<p><strong>What I learned:</strong></p>
+<p>[Write what you learned]</p>
+<p><strong>Tomorrow I will:</strong></p>
+<p>[Write your plans]</p>
+</div>
+</div>
+
+<!-- Short-term Goals -->
+<div class="note-section">
+<h2>🎯 Short-term Goals (This Month)</h2>
+<ul class="goals-list">
+<li>
+<input type="checkbox" id="goal1">
+<label for="goal1">[Goal 1 - describe it]</label>
+</li>
+<li>
+<input type="checkbox" id="goal2">
+<label for="goal2">[Goal 2 - describe it]</label>
+</li>
+<li>
+<input type="checkbox" id="goal3">
+<label for="goal3">[Goal 3 - describe it]</label>
+</li>
+</ul>
+</div>
+
+<!-- Long-term Goals -->
+<div class="note-section">
+<h2>🌟 Long-term Goals (This Year)</h2>
+<ul class="goals-list">
+<li>
+<input type="checkbox" id="longgoal1">
+<label for="longgoal1">[Big goal 1]</label>
+</li>
+<li>
+<input type="checkbox" id="longgoal2">
+<label for="longgoal2">[Big goal 2]</label>
+</li>
+<li>
+<input type="checkbox" id="longgoal3">
+<label for="longgoal3">[Big goal 3]</label>
+</li>
+</ul>
+</div>
+
+<!-- Life Lessons -->
+<div class="note-section">
+<h2>💡 Life Lessons Learned</h2>
+<div class="lesson-card">
+<h3>Lesson 1</h3>
+<p>[Important lesson you learned and when]</p>
+</div>
+<div class="lesson-card">
+<h3>Lesson 2</h3>
+<p>[Another important realization]</p>
+</div>
+</div>
+
+<!-- Gratitude Journal -->
+<div class="note-section">
+<h2>🙏 Things I'm Grateful For</h2>
+<ul class="gratitude-list">
+<li>[Thing 1]</li>
+<li>[Thing 2]</li>
+<li>[Thing 3]</li>
+<li>[Thing 4]</li>
+<li>[Thing 5]</li>
+</ul>
+</div>
+
+<!-- Important Dates -->
+<div class="note-section">
+<h2>📅 Important Dates to Remember</h2>
+<div class="dates-grid">
+<div class="date-item">
+<p class="date">Jan 1</p>
+<p class="event">[Event name]</p>
+</div>
+<div class="date-item">
+<p class="date">Mar 15</p>
+<p class="event">[Event name]</p>
+</div>
+<!-- Add more dates -->
+</div>
+</div>
+
+<!-- Bucket List -->
+<div class="note-section">
+<h2>🪣 My Bucket List</h2>
+<ul class="bucket-list">
+<li>□ [Thing you want to do before you die]</li>
+<li>□ [Place you want to visit]</li>
+<li>□ [Experience you want to have]</li>
+<li>□ [Skill you want to master]</li>
+<li>□ [Person you want to meet]</li>
+</ul>
+</div>
+
+<!-- Quick Notes -->
+<div class="note-section full-width">
+<h2>📌 Quick Notes & Thoughts</h2>
+<div class="quick-notes">
+<p>[Random thoughts, ideas, reminders, quotes that inspire you]</p>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div id="footer1" class="footer1">
+<h3>
+&copy; MY PERSONAL LIFE JOURNAL. DOCUMENTING MY JOURNEY, ONE DAY AT A TIME.
+</h3>
+</div>
+</footer>
+
+</body>
+</html>

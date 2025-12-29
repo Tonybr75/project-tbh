@@ -1,40 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project TBH — Gentle Style & Personal Branding</title>
-  <link rel="stylesheet" href="style.css">
+<title>My Personal Life Journal</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>🌸 Project TBH</h1>
-    <p>Gentle style. Focused mind. Tech + Basketball + Money—curated with care.</p>
-  </header>
+    <script>
+// Check if user is logged in
+if (!sessionStorage.getItem('isLoggedIn')) {
+    // Not logged in - redirect to login page
+    window.location.href = 'login.html';
+}
+</script>
 
-  <main>
-    <section>
-      <h2>Minimalist Online Presence</h2>
-      <p>Craft a clean, stylish portfolio site that reflects both technical skill and personality.</p>
-    </section>
+<header>
+<div id="nav1" class="heading">
+<h1>
+                    MY PERSONAL LIFE JOURNAL
+</h1>
+<div id="nav2" class="nav2">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT ME</a></li>
+<li><a href="images.html">MEMORIES</a></li>
+<li><a href="videos.html">VIDEO DIARY</a></li>
+<li><a href="contactus.html">NOTES & GOALS</a></li>
+</ul>
+</div>
+</div>
+</header>
 
-    <section>
-      <h2>Content Creation</h2>
-      <p>Write thoughtful blog posts blending basketball, money, and computer science insights.</p>
-    </section>
+<div id="homeimage" class="images">
+<img src="bgimage.png">
+</div>
 
-    <section>
-      <h2>Digital Journaling</h2>
-      <p>Document growth, ideas, and reflections—turning introversion into a creative strength.</p>
-    </section>
-  </main>
+<!-- Add a welcome section -->
+<div class="welcome-section">
+<h2>Welcome to My Personal Space</h2>
+<p>This is where I document my journey, capture memories, track my goals, and reflect on life's moments.</p>
+<div class="quick-stats">
+<div class="stat-card">
+<h3>📸</h3>
+<p class="stat-number">0</p>
+<p class="stat-label">Memories Captured</p>
+</div>
+<div class="stat-card">
+<h3>🎯</h3>
+<p class="stat-number">0</p>
+<p class="stat-label">Goals Set</p>
+</div>
+<div class="stat-card">
+<h3>📝</h3>
+<p class="stat-number">0</p>
+<p class="stat-label">Journal Entries</p>
+</div>
+<div class="stat-card">
+<h3>🎬</h3>
+<p class="stat-number">0</p>
+<p class="stat-label">Video Logs</p>
+</div>
+</div>
+</div>
 
-  <footer>
-    <p>© <span id="year"></span> Project TBH — Built by Tonybr75</p>
-  </footer>
+<footer>
+<div id="footer1" class="footer1">
+<h3>
+&copy; MY PERSONAL LIFE JOURNAL. DOCUMENTING MY JOURNEY, ONE DAY AT A TIME.
+</h3>
+</div>
+</footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

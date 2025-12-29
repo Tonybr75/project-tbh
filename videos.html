@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Video Gallery</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script>
+// Check if user is logged in
+if (!sessionStorage.getItem('isLoggedIn')) {
+    // Not logged in - redirect to login page
+    window.location.href = 'login.html';
+}
+</script>
+
+<header>
+<div id="nav1" class="heading">
+<h1>
+                    WELCOME TO THE FUTURE OF TECHNOLOGY
+</h1>
+<div id="nav2" class="nav2">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT_US</a></li>
+<li><a href="images.html">IMAGES</a></li>
+<li><a href="videos.html">VIDEOS</a></li>
+<li><a href="contactus.html">CONTACT US</a></li>
+</ul>
+</div>
+</div>
+</header>
+
+<div class="video-gallery">
+<h1>My Video Journal</h1>
+
+<a href="https://photos.app.goo.gl/2ALvEetZmdewdX8v5" target="_blank" class="video-link-btn">
+    <span>🎥 View Full Video Collection</span>
+    <span class="link-arrow">→</span>
+</a>
+
+<!-- Video 1 -->
+<div class="video-card">
+<video controls>
+<source src="video1.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<div class="video-info">
+<h3>📅 November 10, 2024 - [Title of Entry]</h3>
+<p>Today was interesting because... [Your thoughts, feelings, what happened]</p>
+</div>
+</div>
+
+<!-- Add more video diary entries -->
+</div>
+<!-- ADD MORE VIDEOS BELOW -->
+<!-- Just copy and paste this block and change the video file name, title, and description -->
+<!--
+<div class="video-card">
+<video controls>
+<source src="your-video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<div class="video-info">
+<h3>Your Video Title</h3>
+<p>Your video description goes here.</p>
+</div>
+</div>
+-->
+
+</div>
+
+<footer>
+<div id="footer1" class="footer1">
+<h3>
+&copy; PROJECT_1 BRAVEHART. WELCOME TO THE FUTURE OF TECHNOLOGY.
+</h3>
+</div>
+</footer>
+
+</body>
+</html>
