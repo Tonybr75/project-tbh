@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - BraveHart Technology</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="login-page">
+
+<div class="login-container">
+    <div class="login-box">
+        <div class="login-header">
+            <h1>🔐</h1>
+            <h2>Welcome Back</h2>
+            <p>Enter your password to access the site</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password" 
+                    required
+                    autocomplete="current-password">
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
+            </div>
+
+            <button type="submit" class="login-btn">
+                <span>Login</span>
+                <span class="login-icon">→</span>
+            </button>
+
+            <div id="errorMessage" class="error-message"></div>
+        </form>
+
+        <div class="login-footer">
+            <p>Protected by BraveHart Security</p>
+        </div>
+    </div>
+
+    <!-- Animated background elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+</div>
+
+<script>
+// Set your password here
+const CORRECT_PASSWORD = "bravehart2024"; // CHANGE THIS TO YOUR PASSWORD
+
+// Toggle password visibility
+function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const toggleBtn = document.querySelector('.toggle-password');
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleBtn.textContent = '🙈';
+    } else {
+        passwordInput.type = 'password';
+        toggleBtn.textContent = '👁️';
+    }
+}
+
+// Handle login
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const passwordInput = document.getElementById('password');
+    const errorMessage = document.getElementById('errorMessage');
+    const loginBtn = document.querySelector('.login-btn');
+    
+    // Show loading state
+    loginBtn.innerHTML = '<span>Checking...</span><span class="login-icon">⏳</span>';
+    loginBtn.disabled = true;
+    
+    // Simulate loading (remove this setTimeout if you want instant login)
+    setTimeout(() => {
+        if (passwordInput.value === CORRECT_PASSWORD) {
+            // Success!
+            errorMessage.style.display = 'none';
+            loginBtn.innerHTML = '<span>Success!</span><span class="login-icon">✅</span>';
+            loginBtn.style.background = 'linear-gradient(135deg, #4facfe, #00f2fe)';
+            
+            // Store login state
+            sessionStorage.setItem('isLoggedIn', 'true');
+            
+            // Redirect to homepage
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 500);
+            
+        } else {
+            // Wrong password
+            errorMessage.textContent = '❌ Incorrect password. Please try again.';
+            errorMessage.style.display = 'block';
+            
+            // Shake animation
+            document.querySelector('.login-box').classList.add('shake');
+            setTimeout(() => {
+                document.querySelector('.login-box').classList.remove('shake');
+            }, 500);
+            
+            // Reset button
+            loginBtn.innerHTML = '<span>Login</span><span class="login-icon">→</span>';
+            loginBtn.disabled = false;
+            
+            // Clear input
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+    }, 1000);
+});
+
+// Auto-focus password field
+document.getElementById('password').focus();
+</script>
+
+</body>
+</html>
